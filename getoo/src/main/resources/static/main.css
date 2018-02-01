@@ -99,3 +99,8 @@ a#dart{
 #move_page option{
 	background-color: #ffffff
 }
+
+button.item{
+	margin:20px;
+	padding:10px;
+}
