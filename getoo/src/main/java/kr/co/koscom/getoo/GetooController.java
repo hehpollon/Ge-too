@@ -26,17 +26,18 @@ public class GetooController {
 		return "Hello, Spring Boot!";
 	}
 	
-	@RequestMapping("/hello")
+	@RequestMapping("/account")
 	public String hello(Model model) {
 		model.addAttribute("name", "getoo");
 		return "hello";
 	}
 	
 	@RequestMapping("/index")
-	public String index(Model model,@RequestParam("stockname") String stockname) {
+	public String index(Model model,@RequestParam("stockname") String stockname,@RequestParam("iprice") String iprice) {
 		Haystack heystack = new Haystack();
 		String data = heystack.getRecommend(stockname);
 		model.addAttribute("stockname",stockname);
+		model.addAttribute("iprice",iprice);
 		if(data == "") {
 			
 		}else{

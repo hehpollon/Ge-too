@@ -28,7 +28,7 @@
 
 	<div class="field">
 		<h5 class="label"><img src="./icon/bar.png" />  금액</h5>
-		<p id="expense">22,000</p>
+		<p id="expense">${iprice}</p>
 	</div>
 	<div class="field">
 		<h5 class="label"><img src="./icon/bar.png" />  투자 추천</h5>
