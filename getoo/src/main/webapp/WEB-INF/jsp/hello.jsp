@@ -63,21 +63,23 @@ function showGeToo(bnName, price){
 </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<div class="head">지투:지출에 투자하다</div>
-<div class = "banner-top">
+<div class="head">지투:지출을 투자하다</div>
+<div class="banner-top">
 	<ul>
 	</ul>
 </div>
 </head>
 <body>
-        <div id="content">
-            <ul>
-                <a href = "/index?stockname=스타벅스코리아&iprice=100,000원"><li name="geeList" id='gee1'>스타벅스코리아, 100,000원</li></a>
-                <a href = "/index?stockname=GS리테일&iprice=48,000원"><li name="geeList" id='gee2'>GS리테일, 48,000원</li></a>
-                <a href = "/index?stockname=쿠팡&iprice=120,000원"><li name="geeList" id='gee3'>쿠팡, 120,000원</li></a>
-            </ul>
-        </div>
-        <div id="footer"> Copyright © KOSCOM Corp. All rights reserved.
-        </div>
+    <div id="content" class="field">
+	<h5 class="label"><img src="./icon/bar.png" />지출내역</h5>
+    <ul>
+              <a href = "/index?stockname=스타벅스코리아&iprice=100,000원"><li name="geeList" id='gee1'>스타벅스코리아, 100,000원</li></a>
+              <a href = "/index?stockname=GS리테일&iprice=48,000원"><li name="geeList" id='gee2'>GS리테일, 48,000원</li></a>
+              <a href = "/index?stockname=쿠팡&iprice=120,000원"><li name="geeList" id='gee3'>쿠팡, 120,000원</li></a>
+          </ul>
+    </div>
+    <div class="footer">
+      	Copyright © 1조. All rights reserved.
+    </div>
 </body>
 </html>

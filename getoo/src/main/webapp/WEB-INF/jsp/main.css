@@ -9,6 +9,13 @@ div.head{
 	text-align: center;
 }
 
+div.footer{
+	background-color: #FB5A03;
+	padding:10px;
+	color:white;
+	text-align: center;
+}
+
 div.banner-top{
 	background-color:#e0e0e0;
 	padding:8px;
