@@ -41,7 +41,7 @@ div.field{
 }
 
 div.field>*{
-	vertical-align: middle;
+	vertical-align: text-top;
 	display: inline-block;
 	margin-top: 10;
 	padding: 10px;
@@ -64,33 +64,30 @@ div.investment>div{
 	float:left
 }
 
-div.items{
+div.companies{
 
-	width:20%;
-}
-div.items *{
-	display:table;
-	margin: 0 auto;
+	width:100%;
 }
 
-div.right{
-	width:80%;
-}
-div.right>*{
-	margin-bottom: 30px
+div.item{
+	float:left;
 }
 
 
-div.finance th, td{
+
+
+th, td{
 	border-bottom: 0.5px solid grey;
 	padding-right:30px;
 	padding-top:6px;
 	padding-bottom:6px;
 	text-align:center;
 }
-div.finance table{
+table{
 	border-collapse:collapse;
+
 }
+
 a#dart{
 	float:right;
 	color:grey;
@@ -106,3 +103,8 @@ a#dart{
 #move_page option{
 	background-color: #ffffff
 }
+
+
+
+
+

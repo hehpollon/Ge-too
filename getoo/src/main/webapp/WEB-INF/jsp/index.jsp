@@ -33,24 +33,16 @@
 	<div class="field">
 		<h5 class="label"><img src="./icon/bar.png" />  투자 추천</h5>
 		<div class="investment">
-			<div class="helper"></div>
-			<div class="items">
-				<input type="image" class="icon" src="./icon/icon-up-orange.png" />
-				<div id="companies"></div>
-				<!-- Company! -->
-
-				<iframe width=800 name="cmpny" width="0" height="0" frameborder="0" scrolling="no"></iframe>
-				<form name="frm" method="post" action=""></form>
-				<input type="image" class="icon" src="./icon/icon-down-orange.png" />
-			</div>
 			<div class="right">
-				<div class="price">
+				<div class="price">		
+				<!--		
 					<div class="buttons">
 						<button class="term" onclick=setTerm(3)>3개월</button>
 						<button class="term" onclick=setTerm(12)>1년</button>
 						<button class="term" onclick=setTerm(36)>3년</button>
 					</div>
-					
+					 -->
+					 
 					<iframe width=800 name="prce" width="0" height="0" frameborder="0" scrolling="no"></iframe>
 					<form name="frm2" method="post" action=""></form>
 
@@ -117,13 +109,24 @@
 					
 					</script>
 					</canvas>
+					
+					
+					
+				</div>
+				<!-- Company! -->
+				<div id="companies">
+					<table>
+						<tbody id="companies_table">
+						</tbody>
+					</table>
 				</div>
 				<div class="finance">
 					<table><!-- PUT FINANCE DATA HERE -->
-						<th><td>${stock1}</td><td>${stock2}</td><td>${stock3}</td></th>
-						<tr><td>영업이익</td><td>${stock1oprofit}</td><td>${stock2oprofit}</td><td>${stock3oprofit}</td></tr>
-						<tr><td>순이익</td><td>${stock1nprofit}</td><td>${stock2nprofit}</td><td>${stock3nprofit}</td></tr>
-						<tr><td>부채</td><td>${stock1liabilities}</td><td>${stock2liabilities}</td><td>${stock3liabilities}</td></tr>
+						<tr><th>종목명</th><th>영업이익</th><th>순이익</th><th>부채</th></tr>
+			
+						<tr><td>${stock1}</td><td>${stock1oprofit}</td><td>${stock1nprofit}</td><td>${stock1liabilities}</td></tr>
+						<tr><td>${stock2}</td><td>${stock2oprofit}</td><td>${stock2nprofit}</td><td>${stock2liabilities}</td></tr>
+						<tr><td>${stock3}</td><td>${stock3oprofit}</td><td>${stock3nprofit}</td><td>${stock3liabilities}</td></tr>
 					</table>
 					<a id="dart" href="https://dart.fss.or.kr/">DART 바로가기</a>
 					
@@ -147,19 +150,43 @@
 
 
 				<script>
+				//수익률 계산
+				function pround(number, precision) {
+			  var factor = Math.pow(10, precision);
+			  return Math.round(number * factor) / factor;
+			}
+				
+				var pricelst=[];
+				var earninglst = [];
+				var earningRate = [];
+				var lst = "${stock1price}".split(",");
+				pricelst.push(lst[lst.length-2]);
+				earninglst.push(lst[lst.length-2]-lst[0]);
+				earningRate.push(pround((lst[lst.length-2]-lst[0])/lst[0]*100,2));
+				var lst = "${stock2price}".split(",");
+				pricelst.push(lst[lst.length-2]);
+				earninglst.push(lst[lst.length-2]-lst[0]);
+				earningRate.push(pround((lst[lst.length-2]-lst[0])/lst[0]*100,2));
+				var lst = "${stock3price}".split(",");
+				pricelst.push(lst[lst.length-2]);
+				earninglst.push(lst[lst.length-2]-lst[0]);
+				earningRate.push(pround((lst[lst.length-2]-lst[0])/lst[0]*100,2));
+			
 				
 				var cmpnylst = "${cmpnylstSTR}".split(",");
-				var btn= document.getElementById("companies").innerHTML;
+				document.getElementById("companies_table").innerHTML = document.getElementById("companies_table").innerHTML +"<tr><th>종목명</th><th>현재가</th><th>주당 수익</th><th>수익률</th></tr>";					
 				if (cmpnylst.length != 0){
 					for (var i=0;i<cmpnylst.length-1;i++){
 						//var btn = document.getElementById("companies").innerHTML+="<button class='item' onclick=setCompany('"+cmpnylst[i]+"')>"+cmpnylst[i]+"</button>";
-						document.getElementById("companies").innerHTML=document.getElementById("companies").innerHTML+"<button class='item' onclick=setCompany('"+cmpnylst[i]+"')>"+cmpnylst[i]+"</button>";
-					
+				//		document.getElementById("companies").innerHTML=document.getElementById("companies").innerHTML
+				//			+"<button class='item' onclick=setCompany('"+cmpnylst[i]+"')>"+cmpnylst[i]+"</button>";
+						document.getElementById("companies_table").innerHTML=document.getElementById("companies_table").innerHTML+"<tr><td>"+cmpnylst[i]+"</td><td>"+pricelst[i]+"</td><td>"+earninglst[i]+"</td><td>"+ earningRate[i]+"%"+"</td></tr>";
+						
 					}
 				}else{
 					var btn= document.getElementById("companies").innerHTML="X";
 				}
-				
+		
 				function setCompany(company_name){
 					frm.target="cmpny";
 					frm.action = location.herf+"?stockname="+company_name;
