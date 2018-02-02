@@ -68,22 +68,34 @@ function showGeToo(bnName, price){
 	<ul>
 	</ul>
 </div>
+<style type="text/css">a {text-decoration: none; color:#343434;}</style>
 </head>
 <body>
-    <div id="content" class="field">
-	<h5 class="label"><img src="./icon/bar.png" />지출내역</h5>
-    <ul>
-        <a href = "/index?stockname=스타벅스코리아&iprice=100,000원"><li name="geeList" id='gee1'>스타벅스코리아, 100,000원</li></a>
-        <a href = "/index?stockname=GS리테일&iprice=48,000원"><li name="geeList" id='gee2'>GS리테일, 48,000원</li></a>
-        <a href = "/index?stockname=쿠팡&iprice=120,000원"><li name="geeList" id='gee3'>쿠팡, 120,000원</li></a>
-        <a href = "/index?stockname=하나투어&iprice=1,000,000원"><li name="geeList" id='gee1'>하나투어, 1,000,000원</li></a>
-        <a href = "/index?stockname=인터파크&iprice=48,000원"><li name="geeList" id='gee2'>인터파크, 48,000원</li></a>
-        <a href = "/index?stockname=아리따움&iprice=120,000원"><li name="geeList" id='gee3'>아리따움, 120,000원</li></a>   
-        <a href = "/index?stockname=SPC&iprice=60,000원"><li name="geeList" id='gee1'>SPC, 60,000원</li></a>
-        <a href = "/index?stockname=이마트&iprice=300,000원"><li name="geeList" id='gee1'>이마트, 300,000원</li></a>
+
+	
+    <div id="content" class="field" style="text-align:center">
+    <h5 class="label" style="vertical-align:top"><img src="./icon/bar.png" />지출내역</h5>
+    <ul style="width:300px;">
+    	<hr>
+        <a href = "/index?stockname=스타벅스코리아&iprice=100,000원"><li name="geeList" id='gee1'>스타벅스코리아 100,000원</li></a>
+        <hr>
+        <a href = "/index?stockname=GS리테일&iprice=48,000원"><li name="geeList" id='gee2'>GS리테일 48,000원</li></a>
+        <hr>
+        <a href = "/index?stockname=쿠팡&iprice=120,000원"><li name="geeList" id='gee3'>쿠팡 120,000원</li></a>
+        <hr>
+        <a href = "/index?stockname=하나투어&iprice=1,000,000원"><li name="geeList" id='gee1'>하나투어 1,000,000원</li></a>
+        <hr>
+        <a href = "/index?stockname=인터파크&iprice=48,000원"><li name="geeList" id='gee2'>인터파크 48,000원</li></a>
+        <hr>
+        <a href = "/index?stockname=세븐일레븐&iprice=3,500원"><li name="geeList" id='gee3'>세븐일레븐 3,500원</li></a>  
+        <hr> 
+        <a href = "/index?stockname=SPC&iprice=60,000원"><li name="geeList" id='gee1'>SPC 60,000원</li></a>
+        <hr>
+        <a href = "/index?stockname=이마트&iprice=300,000원"><li name="geeList" id='gee1'>이마트 300,000원</li></a>
+        <hr>
     </ul>
     </div>
-    <div class="footer">
+    <div class="footer" style="text-align:center">
       	Copyright © 1조. All rights reserved.
     </div>
 </body>

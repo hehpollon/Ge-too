@@ -38,6 +38,8 @@ public class GetooController {
 		String data = heystack.getRecommend(stockname);
 		model.addAttribute("stockname",stockname);
 		model.addAttribute("iprice",iprice);
+		
+		
 		if(data == "") {
 			
 		}else{
@@ -51,7 +53,6 @@ public class GetooController {
 			String result="";
 			try {
 				result = json.get("data").toString();
-				System.out.println(result);
 				String[] splitted = result.split("name");
 				String[] splittedNum = result.split("symbol");
 				String cmpnylstSTR = "";
@@ -91,6 +92,9 @@ public class GetooController {
 						model.addAttribute("stock3liabilities", liabilities);
 					}
 				}
+				
+				//투자제안 입력하기
+				
 
 				model.addAttribute("cmpnylstSTR",cmpnylstSTR);
 			} catch (Exception e) {
@@ -131,7 +135,6 @@ public class GetooController {
 			String result="";
 			try {
 				result = json.get("data").toString();
-				System.out.println(result);
 				String[] splitted = result.split("name");
 				String[] splittedNum = result.split("symbol");
 				for(int i = 0; i < 3; i++) {
@@ -223,7 +226,6 @@ public class GetooController {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		System.out.println(prices);
 		return prices;
 		
 	}
@@ -259,5 +261,4 @@ public class GetooController {
 		return state;
 	}
     
-
 }
