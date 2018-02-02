@@ -85,8 +85,9 @@ th, td{
 }
 table{
 	border-collapse:collapse;
-
 }
+
+
 
 a#dart{
 	float:right;
@@ -96,7 +97,7 @@ a#dart{
 	padding:10px;
 	padding-left:30px;
 	padding-right:30px;
-	float:right;
+	margin-top: 20px;
 	background-color: #ff9d60;
 	
 }
@@ -106,5 +107,7 @@ a#dart{
 
 
 
-
+div.right>*{
+	margin-bottom:30px;
+}
 
