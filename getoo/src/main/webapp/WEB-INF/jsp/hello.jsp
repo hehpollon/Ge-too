@@ -73,10 +73,15 @@ function showGeToo(bnName, price){
     <div id="content" class="field">
 	<h5 class="label"><img src="./icon/bar.png" />지출내역</h5>
     <ul>
-              <a href = "/index?stockname=스타벅스코리아&iprice=100,000원"><li name="geeList" id='gee1'>스타벅스코리아, 100,000원</li></a>
-              <a href = "/index?stockname=GS리테일&iprice=48,000원"><li name="geeList" id='gee2'>GS리테일, 48,000원</li></a>
-              <a href = "/index?stockname=쿠팡&iprice=120,000원"><li name="geeList" id='gee3'>쿠팡, 120,000원</li></a>
-          </ul>
+        <a href = "/index?stockname=스타벅스코리아&iprice=100,000원"><li name="geeList" id='gee1'>스타벅스코리아, 100,000원</li></a>
+        <a href = "/index?stockname=GS리테일&iprice=48,000원"><li name="geeList" id='gee2'>GS리테일, 48,000원</li></a>
+        <a href = "/index?stockname=쿠팡&iprice=120,000원"><li name="geeList" id='gee3'>쿠팡, 120,000원</li></a>
+        <a href = "/index?stockname=하나투어&iprice=1,000,000원"><li name="geeList" id='gee1'>하나투어, 1,000,000원</li></a>
+        <a href = "/index?stockname=인터파크&iprice=48,000원"><li name="geeList" id='gee2'>인터파크, 48,000원</li></a>
+        <a href = "/index?stockname=아리따움&iprice=120,000원"><li name="geeList" id='gee3'>아리따움, 120,000원</li></a>   
+        <a href = "/index?stockname=SPC&iprice=60,000원"><li name="geeList" id='gee1'>SPC, 60,000원</li></a>
+        <a href = "/index?stockname=이마트&iprice=300,000원"><li name="geeList" id='gee1'>이마트, 300,000원</li></a>
+    </ul>
     </div>
     <div class="footer">
       	Copyright © 1조. All rights reserved.

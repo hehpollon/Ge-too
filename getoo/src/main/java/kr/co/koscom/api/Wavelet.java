@@ -13,8 +13,8 @@ public class Wavelet {
 		try{
 			StringBuilder urlBuilder = new StringBuilder("https://sandbox-apigw.koscom.co.kr/v1/wavelet/prices/{issuecode}".replace("{issuecode}", URLEncoder.encode(stockNum, "UTF-8")));
 	        urlBuilder.append("?");
-	        urlBuilder.append(URLEncoder.encode("from","UTF-8") + "=" + URLEncoder.encode("20160101", "UTF-8") + "&");
-	        urlBuilder.append(URLEncoder.encode("to","UTF-8") + "=" + URLEncoder.encode("20170201", "UTF-8") + "&");
+	        urlBuilder.append(URLEncoder.encode("from","UTF-8") + "=" + URLEncoder.encode("20170101", "UTF-8") + "&");
+	        urlBuilder.append(URLEncoder.encode("to","UTF-8") + "=" + URLEncoder.encode("20180201", "UTF-8") + "&");
 	        urlBuilder.append(URLEncoder.encode("interval","UTF-8") + "=" + URLEncoder.encode("1M", "UTF-8") + "&");
 	        urlBuilder.append(URLEncoder.encode("apikey","UTF-8") + "=" + URLEncoder.encode("l7xxb8f91f1d0b9545998245636e0e1506c1", "UTF-8"));
 	        URL url = new URL(urlBuilder.toString());
